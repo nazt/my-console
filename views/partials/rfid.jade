@@ -1,3 +1,36 @@
-h1
-  | TAG ID: 
-  span {{ tagId }}
+div.hero-unit
+  h1(ng-show="!tagId") WAITING...
+  form.form-horizontal(ng-show="tagId")
+      fieldset
+          //
+             Form Name 
+          h2 Card No. 
+            span.card-no {{ tagId }}
+          //
+             Text input
+          .control-group
+            label.control-label(for='Id') tagId
+            .controls
+              input#Id.input-xlarge(name='Id', type='text', placeholder='placeholder', value='{{tagId}}')
+          //
+             Text input
+          .control-group
+            label.control-label(for='name') Name
+            .controls
+              input#name.input-xlarge(name='name', type='text', placeholder='Name', value='Nat')
+          //
+             Text input
+          .control-group
+            label.control-label(for='amount') Amount
+            .controls
+              input#amount.input-xlarge(name='amount', type='text', placeholder='placeholder', value='300')
+          //
+             Button (Double) 
+          .control-group
+            label.control-label(for='button1id')
+            .controls
+              button#button1id.btn.btn-success(name='button1id') Submit
+              button#button2id.btn.btn-danger(name='button2id') Clear
+
+
+

@@ -4,6 +4,14 @@ html(ng-app="myApp")
     meta(charset='utf8')
     base(href='/')
     title Angular Socket.io Seed App
+    link(rel='stylesheet', href='/css/bootstrap.css')
     link(rel='stylesheet', href='/css/app.css')
   body
-    block body
+    div(class='navbar navbar-inverse  header-section')
+      div.navbar-inner
+        a.brand
+          | RASPBERRY PI
+        div(class='navbar-form pull-right')
+          a(class='brand about') Nat
+
+      block body

@@ -14,10 +14,6 @@ exports.partials = function (req, res) {
 };
 
 exports.readTag = function  (req, res) {
-	// req.io.broadcast('new visitor')
-
-	// console.log(io)
-	// redis2.subscribe("emrchat");
 	var pub = redis.createClient();
 	var result = pub.publish("natja", req.params.tagId);	
 	res.send(req.params.tagId)
