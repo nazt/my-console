@@ -1,7 +1,10 @@
 <div ng-controller="MonitoringCtrl">
-	[[sensors]]
 	<h1>Sensors</h1>
 	<div ng-repeat="(k, v) in sensors">
-	   	<h2>node-[[k]] ----> [[v]] </h2>
+	   	<div class="wrapper">
+	   		<div>[[v]]</div>
+	   		<div>[[k]]</div>
+	   	</div>
 	</div>
 </div>
+
