@@ -28,3 +28,12 @@
   content: "";
   padding: 0;
 }
+
+.wrapper {
+  width:  100px;
+}
+
+.wrapper div {
+  text-align: center;
+}
+
