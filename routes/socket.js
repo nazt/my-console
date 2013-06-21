@@ -6,7 +6,7 @@ const redis = require('redis');
 
 module.exports = function (socket) {
     var sub = redis.createClient();
-    sub.subscribe("natja") ;
+    sub.subscribe("rfid_ch") ;
     sub.on('message', function(channel, message) {
         // console.log('got message', JSON.stringify(message, channel);
         socket.emit('receive:rfidTag', { tagId: message});
@@ -22,6 +22,18 @@ module.exports = function (socket) {
         sub.quit();
     });
 
+    var sensor_sub = redis.createClient();
+    sensor_sub.subscribe("sensor_ch") ;
+
+    sensor_sub.on('message', function(channel, message) {
+      console.log('emit sensor')
+      socket.emit('receive:sensorMsg', { sensorMsg: message })
+    })
+
+
+    sensor_sub.on('disconnect', function() {
+        sensor_sub.quit();
+    });
 
   socket.emit('send:name', {
     name: 'Bob'

@@ -1,0 +1,77 @@
+
+<div class="hero-unit">
+  <h1 ng-show="!tagId">
+    WAITING...
+  </h1>
+  <form ng-show="tagId" class="form-horizontal">
+    <fieldset>
+      <!--
+<Form>
+Name 
+</Form>
+-->
+  <h2>
+    Card No. 
+    <span class="card-no">
+      {{ tagId }}
+    </span>
+  </h2>
+  <!--
+<Text>
+input
+</Text>
+-->
+  <div class="control-group">
+    <label for="Id" class="control-label">
+      tagId
+    </label>
+    <div class="controls">
+      <input id="Id" name="Id" type="text" placeholder="placeholder" value="{{tagId}}" class="input-xlarge"/>
+    </div>
+  </div>
+  <!--
+<Text>
+input
+</Text>
+-->
+  <div class="control-group">
+    <label for="name" class="control-label">
+      Name
+    </label>
+    <div class="controls">
+      <input id="name" name="name" type="text" placeholder="Name" value="Nat" class="input-xlarge"/>
+    </div>
+  </div>
+  <!--
+<Text>
+input
+</Text>
+-->
+  <div class="control-group">
+    <label for="amount" class="control-label">
+      Amount
+    </label>
+    <div class="controls">
+      <input id="amount" name="amount" type="text" placeholder="placeholder" value="300" class="input-xlarge"/>
+    </div>
+  </div>
+  <!--
+<Button>
+(Double) 
+</Button>
+-->
+  <div class="control-group">
+    <label for="button1id" class="control-label">
+    </label>
+    <div class="controls">
+      <button id="button1id" name="button1id" class="btn btn-success">
+        Submit
+      </button>
+      <button id="button2id" name="button2id" class="btn btn-danger">
+        Clear
+      </button>
+    </div>
+  </div>
+  </fieldset>
+  </form>
+</div>
