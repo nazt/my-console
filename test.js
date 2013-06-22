@@ -15,7 +15,12 @@ sp.on("data", function (data) {
   }
   else {
     console.log(text);
-    request.get('http://192.168.42.1:3000/sensor/'+text); 
+    try {
+      request.get('http://192.168.42.1:3000/sensor/'+text); 
+    }
+    catch (e) {
+      console.log('error occured', e);
+    }
   } 
   last_msg = text;
 
