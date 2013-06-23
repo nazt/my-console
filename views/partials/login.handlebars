@@ -1,0 +1,57 @@
+<div class="container">
+  <div class="row">
+    <div class="span10">
+      <div class="row show-grid">
+        
+        <div class="span6" id="big-logo-image">
+          HELLO
+        </div>
+        <div class="well span3">
+          
+          <form action='${postUrl}' method='POST' id='login'>
+            <fieldset>
+              <legend>
+                  LOGIN
+              </legend>
+              <div class="clearfix">
+                <label for="xlInput">
+                  Username
+                </label>
+                <div class="input">
+                  <input id="xlInput" class="span3" type="text" size="10" name="j_username">
+                </div>
+            </div>
+            <br />
+            <div class="clearfix">
+              <label for="xlInput">
+                Password
+              </label>
+              <div class="input">
+                <input id="xlInput" class="span3" type="password" size="10" name="j_password">
+                <g:hiddenField name="${rememberMeParameter}" id='remember_me' value="true"/>
+              </div>
+            </div>
+            <hr />
+            <div class="clearfix">
+              <div class="input">
+                <div class="inline-inputs">
+                  
+                  <button id="login-button" class="btn btn-primary" type="submit">
+                    Login
+                  </button>
+                  <button class="btn" type="reset">
+                    Cancel
+                  </button>
+                  </div>
+                </div>
+            </div>
+            
+          </fieldset>
+          
+        </form>
+      </div>
+  </div>
+  
+  </div>
+    </div>
+</div>

@@ -56,3 +56,7 @@ MyCtrl1.$inject = ['$scope', 'socket'];
 function MyCtrl2() {
 }
 MyCtrl2.$inject = [];
+
+function LoginCtrl($scope) {
+  console.log("LOGIN CTRL")
+}

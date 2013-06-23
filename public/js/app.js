@@ -10,6 +10,7 @@ var app = angular.module('myApp', ['myApp.filters', 'myApp.services', 'myApp.dir
     $routeProvider.when('/view2', {templateUrl: 'partials/partial2', controller: MyCtrl2});
     $routeProvider.when('/rfid', {templateUrl: 'partials/rfid', controller: RfidCtrl});
     $routeProvider.when('/monitoring', {templateUrl: 'partials/monitoring', controller: MonitoringCtrl });
+    $routeProvider.when('/login', {templateUrl: 'partials/login', controller: LoginCtrl });
     $routeProvider.otherwise({redirectTo: '/view1'});
     $locationProvider.html5Mode(true);
   }]);
